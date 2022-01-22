@@ -6,6 +6,7 @@
 //
 
 #include "Application.hpp"
+#include "Log.hpp"
 
 #include <iostream>
 
@@ -16,6 +17,8 @@ namespace Link {
 		
 		Application::Application() {
 			s_Instance = this;
+			
+			LOG_INFO("Application Created!");
 		}
 		
 		Application::~Application() {

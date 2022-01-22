@@ -1,0 +1,3 @@
+[submodule "Clink/vendor/spdlog"]
+	path = Clink/vendor/spdlog
+	url = https://github.com/gabime/spdlog.git

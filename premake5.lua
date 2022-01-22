@@ -11,7 +11,7 @@ workspace "CLink"
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
---IncludeDir["imgui"] = "Hazel/vendor/imgui"
+IncludeDir["spdlog"] = "CLink/vendor/spdlog/include"
 
 --[[
     CLink PROJECT
@@ -28,6 +28,10 @@ project "CLink"
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
 	files { "%{prj.name}/src/**.cpp", "%{prj.name}/src/**.hpp", "%{prj.name}/src/**.h", "%{prj.name}/src/**.mm"  }
+
+    sysincludedirs {
+        "%{IncludeDir.spdlog}"
+    }
 
 	includedirs { 
         "%{prj.name}/src"
