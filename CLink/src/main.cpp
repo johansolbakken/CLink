@@ -5,7 +5,7 @@
 //  Created by Johan Solbakken on 22/01/2022.
 //
 
-#include "Link/Core/Log.hpp"
+#include "pch.hpp"
 #include "Link/Core/Application.hpp"
 
 extern Link::Core::Application* Link::Core::CreateApplication();

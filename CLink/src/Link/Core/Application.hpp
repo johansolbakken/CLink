@@ -8,6 +8,10 @@
 #ifndef Application_hpp
 #define Application_hpp
 
+#include "Core.hpp"
+
+#include "Window.hpp"
+
 namespace Link {
 	namespace Core
 	{
@@ -16,10 +20,15 @@ namespace Link {
 			virtual ~Application();
 			void Run();
 			
+			inline Window& GetWindow() { return *m_Window; }
 			inline static Application& Instance() { return *s_Instance; }
 		protected:
 			Application();
+			
 		private:
+			Scope<Window> m_Window;
+			bool m_Running = true;
+			
 			static Application* s_Instance;
 		};
 		
