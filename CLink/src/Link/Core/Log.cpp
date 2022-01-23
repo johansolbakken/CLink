@@ -5,6 +5,7 @@
 //  Created by Johan Solbakken on 22/01/2022.
 //
 
+#include "pch.hpp"
 #include "Log.hpp"
 
 namespace Link
