@@ -29,6 +29,9 @@ project "CLink"
 
 	files { "%{prj.name}/src/**.cpp", "%{prj.name}/src/**.hpp", "%{prj.name}/src/**.h", "%{prj.name}/src/**.mm"  }
 
+    pchheader "src/pch.hpp"
+    pchsource "CLink/src/pch.cpp"
+
     sysincludedirs {
         "%{IncludeDir.spdlog}"
     }
